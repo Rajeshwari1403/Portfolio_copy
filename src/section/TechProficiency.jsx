@@ -18,7 +18,7 @@ const TechProficiency = () => {
     setActiveTab(value);
   }
   return (
-    <section id='skills' className='bg-background mt-20 scroll-mt-20'>
+    <section id='skills' className='bg-background mt-20 scroll-mt-20 px-4 py-8'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title'>
@@ -36,7 +36,7 @@ const TechProficiency = () => {
         activeTab={activeTab}
         onChange={handleTabValue}
         />
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 min-h-[430px]'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6'>
         {tabData.map((skill, index) => (
           <motion.div key={skill.id}
           initial={{ opacity: 0, y: 20 }}

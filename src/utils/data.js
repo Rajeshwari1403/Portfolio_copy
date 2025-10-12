@@ -74,7 +74,7 @@ export const SKILLS = [
     icon: FaReact,
     skill: "React JS",
     type: "frontend",
-    description: "Developing skills in building maintainable web applications with React’s component-based approach and modern Hooks. Have experience working with Context API, Redux, and external APIs to create dynamic and responsive user interfaces.",
+    description: "Building responsive web apps using React’s component-based approach, Hooks, Context API, and Redux.",
   },
   {
     id: "02",
