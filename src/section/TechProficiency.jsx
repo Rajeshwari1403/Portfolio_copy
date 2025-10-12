@@ -19,7 +19,7 @@ const TechProficiency = () => {
   }
   return (
     <section id='skills' className='bg-background mt-20 scroll-mt-20 px-4 py-8'>
-      <div className='max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-2'>
+      <div className='max-w-[1200px] mx-auto px-2 sm:px-2 lg:px-2'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title'>
             Technical Proficiency
