@@ -12,7 +12,7 @@ import Footer from './section/Footer'
 
 const App = () => {
   return (
-    <div>
+    <div className="w-full overflow-x-hidden">
       <NavBar />
       <Hero />
       <AboutMe />
