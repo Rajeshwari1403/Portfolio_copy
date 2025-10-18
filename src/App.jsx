@@ -9,20 +9,23 @@ import Certificates from './section/Certificates'
 import Education from './section/Education'
 import Internships from './section/Internships'
 import Footer from './section/Footer'
+import Rough from './components/Rough'
 
 const App = () => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div>
       <NavBar />
       <Hero />
       <AboutMe />
       <Education />
+      
       <TechProficiency />
       <MyProjects />
       <Certificates />
       <Internships />
       <ContactMe />
       <Footer />
+      
     </div>
   )
 }

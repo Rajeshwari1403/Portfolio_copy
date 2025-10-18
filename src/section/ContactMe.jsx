@@ -13,11 +13,11 @@ const ContactMe = () => {
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title'>Contact Me</h4>
-          <p className='text-sm text-center mt-4 leading-6'>
+          <p className='text-sm text-center mt-2 leading-6 text-white text-semibold'>
             Open to tech collaborations and new opportunities — let's connect!
           </p>
         </div>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mt-8'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-2 mt-4'>
           <ContactInfoCard
             icon={<IoMail />}
             label="Email"

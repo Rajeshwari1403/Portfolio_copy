@@ -18,41 +18,34 @@ const TechProficiency = () => {
     setActiveTab(value);
   }
   return (
-    <section id='skills' className='bg-background mt-20 scroll-mt-20 px-4 py-8'>
-      <div className='max-w-[1200px] mx-auto px-2 sm:px-2 lg:px-2'>
-        <div className='w-full lg:w-[60vw] mx-auto'>
-          <h4 className='sec-title'>
-            Technical Proficiency
-          </h4>
-          <p className='text-sm text-center mt-4 leading-6'>Hands-on experience with frontend, backend, databases, and essential tools 
+    <section id='skills' className='bg-primary mt-[-8px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
+      <div className="container mx-auto p-10">
+            <h2 className="sec-title mb-2">Technical Skills</h2>
+            <p className='text-sm text-center mb-4 leading-6 text-white font-semibold'>Hands-on experience with frontend, backend, databases, and essential tools 
                                                             like React, Node.js, MongoDB, Postman, and Figma. Focused on building 
                                                             efficient, responsive applications and integrating APIs for real-world solutions.
-          </p>
-
-        </div>
-
-        <Tabs 
-        tabList={SKILLS_TABS}
-        activeTab={activeTab}
-        onChange={handleTabValue}
-        />
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-6'>
-        {tabData.map((skill, index) => (
-          <motion.div key={skill.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1 }}
-          >
-            <SkillCard 
-               icon={<skill.icon className='w-6 h-6 text-primary' />}
-               skillName = {skill.skill}
-               description = {skill.description}
-               progress = {skill.progress} 
-            />
-          </motion.div>
-        ))}
-        </div>
-      </div>
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {SKILLS.map((skill) => {
+                const Icon = skill.icon;
+                return (
+                  <div
+                    key={skill.title}
+                    className="p-4 bg-gradient-to-b from-[#144361] to-[#6298BC] rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="flex items-center gap-3 mb-3">
+                      <Icon className={`${skill.color} text-3xl`} />
+                      <h3 className="text-lg font-semibold text-primary">{skill.title}</h3>
+                    </div>
+                    <p className="text-gray-300 text-sm">
+                      {skill.items.join("  |  ")}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+           <div className='w-full bg-background rounded-md h-[1px] relative mt-0'></div>
     </section>
   )
 }

@@ -28,7 +28,7 @@ const NavBar = () => {
 
   return (
     <nav className='container mx-auto max-w-7xl sticky top-7 z-10'>
-      <div className='flex items-center justify-between rounded-full bg-white/25 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
+      <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
         {/*LOGO*/}
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
 
@@ -85,8 +85,8 @@ const NavBar = () => {
             const element = document.getElementById('contact');
             if (element) element.scrollIntoView({ behavior: 'auto' });
           }}
-          className='hidden md:block h-12 text-[15px] font-medium text-white bg-primary rounded-full 
-                    px-9 transition-transform duration-300 ease-in-out hover:scale-105'
+          className='hidden md:block h-12 text-[15px] font-semibold text-primary bg-white rounded-full border-4 border-background
+                    px-9 transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white hover:border-4 hover:border-white'
         >
           Hire Me
         </button>

@@ -7,6 +7,10 @@ import {
   FaLinkedin,
   FaBrain,
   FaProjectDiagram,
+  FaServer,
+  FaDatabase,
+  FaFigma,
+  FaLaptopCode,
 } from 'react-icons/fa';
 import MicrosoftExcel from '../assets/Images/Excel.png';
 import { FaBook } from 'react-icons/fa';
@@ -68,7 +72,7 @@ export const SKILLS_TABS = [
   { id: "06", label: "Skills", value: "skills" },
 ];
 
-export const SKILLS = [
+/*export const SKILLS = [
   {
     id: "01",
     icon: FaReact,
@@ -194,6 +198,58 @@ export const SKILLS = [
     skill: "Self Learning",
     type: "skills",
     description: "Able to learn new technologies independently through online courses, documentation, and practice. Focused on building practical understanding by applying concepts to projects. Continuously improving skills to stay updated with modern tools and development practices.",
+  },
+];*/
+
+// src/data/SkillsData.js
+export const SKILLS = [
+  {
+    icon: FaReact,
+    color: "text-cyan-400",
+    title: "Frontend Development",
+    items: ["React JS", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
+  },
+  {
+    icon: FaServer,
+    color: "text-green-400",
+    title: "Backend Development",
+    items: ["Node JS", "Express JS"],
+  },
+  {
+    icon: FaDatabase,
+    color: "text-blue-400",
+    title: "Database Technologies",
+    items: ["MongoDB", "MySQL"],
+  },
+  {
+    icon: FaFigma,
+    color: "text-pink-400",
+    title: "UI/UX & Design",
+    items: ["Figma", "Responsive Design", "Modern Layouts"],
+  },
+  {
+    icon: FaGitAlt,
+    color: "text-red-500",
+    title: "Version Control & Collaboration",
+    items: ["Git", "GitHub", "Branching", "Pull Requests"],
+  },
+  {
+    icon: FaLaptopCode,
+    color: "text-purple-400",
+    title: "Development Environments",
+    items: ["VS Code", "Eclipse IDE", "XAMPP"],
+  },
+  {
+    icon: SiPostman,
+    color: "text-orange-400",
+    title: "API & Automation",
+    items: ["Postman", "API Testing", "Automation Workflows"],
+  },
+  {
+    icon: FaBook,
+    color: "text-yellow-400",
+    title: "Core & Soft Skills",
+    items: ["Problem Solving", "Self Learning", "Analytical Thinking"],
   },
 ];
 

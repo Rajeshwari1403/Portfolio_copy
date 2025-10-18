@@ -18,13 +18,13 @@ const Internships = () => {
     setActiveTab(value);
   }
   return (
-    <section id='internships' className='bg-background mt-20 scroll-mt-20'>
+    <section id='internships' className='bg-primary mt-14 scroll-mt-20'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
-          <h4 className='sec-title'>
+          <h4 className='sec-title mt-[-8px] cursor-pointer'>
             Internships
           </h4>
-          <p className='text-sm text-center mt-4 leading-6'>Acquired practical experience in full-stack development and quality assurance 
+          <p className='text-sm text-center mt-4 leading-6 text-white cursor-pointer font-semibold'>Acquired practical experience in full-stack development and quality assurance 
                                                          as an intern, engaging with React, Node.js, testing, and automated testing. 
                                                          Eager to construct responsive web applications, execute 
                                                          API integrations, and design AI-driven results.
@@ -32,12 +32,12 @@ const Internships = () => {
 
         </div>
 
-        <Tabs 
+        {/*<Tabs 
         tabList={INTERNSHIPS_TABS}
         activeTab={activeTab}
         onChange={handleTabValue}
-        />
-        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 min-h-[380px] mx-auto max-w-3xl'>
+        />*/}
+        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-1 gap-4 mt-4 mx-auto max-w-3xl cursor-pointer'>
         {tabData.map((skill, index) => (
           <motion.div key={skill.id}
           initial={{ opacity: 0, y: 20 }}
@@ -56,6 +56,7 @@ const Internships = () => {
         ))}
         </div>
       </div>
+      <div className='max-w-7xl lg:ml-32 bg-background rounded-md h-[1px] relative mt-0'></div>
     </section>
   )
 }

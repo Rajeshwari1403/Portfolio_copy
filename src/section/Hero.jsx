@@ -10,14 +10,14 @@ import StatInfoCard from '../components/StatInforCard'
 const Hero = () => {
 
   return (
-    <section id='hero' className='container mx-auto max-w-7xl px-8 scroll-mt-28'>
+    <section id='hero' className='container mx-auto max-w-7xl px-8 scroll-mt-20'>
       <div className='flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]'>
         <div className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0'>
-          <h3 className='text-xl lg:text-2xl font-medium text-black'>👋 Hi, I'm Rajeshwari R</h3>
-          <h1 className='w-full lg:w-[480px] text-3xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-3 bg-primary bg-clip-text text-transparent'>
+          <h3 className='text-xl lg:text-2xl font-semibold text-white'>👋 Hi, I'm Rajeshwari R</h3>
+          <h1 className='w-full lg:w-[480px] text-3xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-2 bg-background bg-clip-text text-transparent'>
             Full-Stack & Automation
           </h1>
-          <p className='w-full lg:w-[500px] text-sm lg:text-base mt-4'>
+          <p className='w-full lg:w-[500px] text-sm lg:text-base mt-2 text-white font-semibold'>
             Passionate about full-stack development, automation, and AI, constantly refining skills to build efficient solutions.
           </p>
           <div className='flex justify-center lg:justify-start gap-4 md:gap-8 mt-6'>
@@ -57,11 +57,12 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='flex gap-12 mt-16 md:mt-24 flex-wrap'>
+      <div className='flex gap-12 mt-12 md:mt-20 flex-wrap'>
         {STATS.map((item) => (
           <StatInfoCard key={item.id} count={item.count} label={item.label} />
         ))}
       </div>
+      <div className='w-full bg-background rounded-md h-[1px] relative mt-8'></div>
     </section>
   )
 }
