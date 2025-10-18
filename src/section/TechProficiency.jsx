@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import { SKILLS, SKILLS_TABS } from '../utils/data'
-import Tabs from '../components/Tabs';
-import SkillCard from '../components/SkillCard';
-import { motion } from 'framer-motion';
+import { SKILLS } from '../utils/data'
 
 const TechProficiency = () => {
   const [tabData, setTabData] = useState(SKILLS);
@@ -31,13 +28,13 @@ const TechProficiency = () => {
                 return (
                   <div
                     key={skill.title}
-                    className="p-4 bg-gradient-to-b from-[#144361] to-[#6298BC] rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                    className="p-4 bg-gradient-to-b from-[#85cbf7] to-[#6298BC] rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <Icon className={`${skill.color} text-3xl`} />
                       <h3 className="text-lg font-semibold text-primary">{skill.title}</h3>
                     </div>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-200 text-sm">
                       {skill.items.join("  |  ")}
                     </p>
                   </div>

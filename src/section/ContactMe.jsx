@@ -9,7 +9,7 @@ import { SiGeeksforgeeks, SiGithub, SiLeetcode } from 'react-icons/si'
 
 const ContactMe = () => {
   return (
-    <section id='contact' className='mx-auto max-w-7xl scroll-mt-20'>
+    <section id='contact' className='mx-auto max-w-7xl scroll-mt-20 mt-[-20px]'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title'>Contact Me</h4>

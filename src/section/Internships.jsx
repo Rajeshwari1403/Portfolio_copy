@@ -18,7 +18,7 @@ const Internships = () => {
     setActiveTab(value);
   }
   return (
-    <section id='internships' className='bg-primary mt-14 scroll-mt-20'>
+    <section id='internships' className='bg-primary mt-[-14px] scroll-mt-20'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title mt-[-8px] cursor-pointer'>

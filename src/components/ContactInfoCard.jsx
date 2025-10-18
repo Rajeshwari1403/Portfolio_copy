@@ -16,15 +16,15 @@ const ContactInfoCard = ({ icon, label, text, link, isCopyable }) => {
 
   return (
     <>
-      <div className='flex items-center justify-between gap-5 bg-blue-100 rounded border border-blue-500 px-4 py-3 mb-5 group transition-all hover:bg-blue-200'>
+      <div className='flex items-center justify-between gap-5 bg-gradient-to-b from-[#85cbf7] to-[#6298BC] rounded border border-blue-500 px-4 py-3 mb-5 group transition-all hover:bg-blue-200'>
 
         <div className='flex items-center gap-5'>
 
-          <div className='w-10 h-10 text-xl flex items-center justify-center bg-gradient-primary text-white rounded-lg'>
+          <div className='w-10 h-10 text-xl flex items-center justify-center bg-gradient-primary text-primary rounded-lg'>
             {icon}
           </div>
 
-          <div className="relative text-secondary text-xs md:text-sm">
+          <div className="relative text-primary font-semibold text-xs md:text-sm">
             {/* Wrap label+text in <a> if it's linkable (but not phone) */}
             {link && link !== "no-link" ? (
               <a

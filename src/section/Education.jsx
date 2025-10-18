@@ -20,7 +20,7 @@ const Education = () => {
             <h2 className='hidden lg:block w-[200px] sec-title text-left mb-[-16px]'>Education</h2>
             <p className='hidden lg:block text-sm text-white font-semibold leading-6'>Pursuing an Integrated Master's in Computer Science at Anna University with a strong interest in software development, automation, and building efficient, reliable solutions.</p>
             {EDUCATION.map((edu) => (
-              <div key={edu.id} className='bg-gradient-to-b from-[#144361] to-[#6298BC] rounded-[14px] p-5 relative'>
+              <div key={edu.id} className='bg-gradient-to-b from-[#85cbf7] to-[#6298BC] rounded-[14px] p-4 relative'>
                 <span className='absolute top-4 right-5 text-white text-sm font-semibold cursor-pointer hover:text-primary'>
                   {edu.year}
                   
@@ -28,7 +28,7 @@ const Education = () => {
                 <h4 className='text-xl md:text-xl font-bold text-primary cursor-pointer'>{edu.main}</h4>
                 <h4 className='text-xl md:text-xl font-medium text-white mt-1 cursor-pointer'>{edu.title}</h4>
                 <p className='text-sm md:text-[16px] font-normal text-white mt-1 cursor-pointer'>{edu.course}</p>
-                <span className='text-sm font-normal text-white cursor-pointer'>{edu.percentage}</span>
+                <span className='text-sm font-normal text-white cursor-pointer hover:text-primary'>{edu.percentage}</span>
               </div>
             ))}
           </div>
