@@ -1,33 +1,132 @@
-// src/components/SkillsTab.jsx
-import React from "react";
-import { SKILLS } from "../utils/data";
+import React, { useState } from "react";
+import {
+  FaPhoneAlt,
+  FaGithub,
+  FaLinkedin,
+  FaEnvelope,
+  FaInstagram,
+  FaRegCopy,
+} from "react-icons/fa";
+import { SiGeeksforgeeks, SiLeetcode } from "react-icons/si";
 
-const SkillsTab = () => {
+const Contact = () => {
+  const [copied, setCopied] = useState("");
+
+  const handleCopy = (text, label) => {
+    navigator.clipboard.writeText(text);
+    setCopied(label);
+    setTimeout(() => setCopied(""), 2000); // reset after 2 sec
+  };
+
   return (
-    <div className="bg-[#0B1A2D] text-white py-12 px-6 md:px-16">
-      <h2 className="text-3xl font-bold text-center mb-10">Technical Skills</h2>
+    <section
+      id="contact"
+      className="bg-primary mt-[-2px] mx-auto max-w-7xl rounded-lg scroll-mt-20"
+    >
+      <div className="container mx-auto px-8 md:px-10 py-10">
+        {/* Mobile heading */}
+        <h4 className="block lg:hidden w-[200px] sec-title text-left mb-6 cursor-pointer">
+          Contact Me
+        </h4>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {SKILLS.map((skill) => {
-          const Icon = skill.icon;
-          return (
-            <div
-              key={skill.title}
-              className="p-5 bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                <Icon className={`${skill.color} text-3xl`} />
-                <h3 className="text-lg font-semibold">{skill.title}</h3>
+        <div className="flex flex-col lg:flex-row lg:items-start items-center justify-between gap-6 lg:gap-20">
+          {/* Left icon */}
+          <div className="flex justify-center lg:justify-start items-start w-[200px] md:w-[260px] mt-4 lg:mt-10 ml-20">
+            <FaPhoneAlt className="w-24 h-24 md:w-32 md:h-32 text-accent" />
+          </div>
+
+          {/* Right content */}
+          <div className="flex-1 text-center lg:text-left">
+            <h2 className="hidden lg:block w-[200px] sec-title text-left cursor-pointer">
+              Contact Me
+            </h2>
+
+            <p className="text-sm font-semibold text-justify leading-6 whitespace-pre-line mt-0 text-white cursor-pointer">
+              Open to tech collaborations and new opportunities — let's connect!
+            </p>
+
+            {/* Contact info */}
+            <div className="mt-6 space-y-3 text-white text-lg font-medium">
+              {/* Phone */}
+              <div className="flex items-center justify-center lg:justify-start gap-2">
+                <FaPhoneAlt className="text-accent" /> +91 9080915451
+                <FaRegCopy
+                  onClick={() =>
+                    handleCopy("+91 9080915451", "Phone number copied!")
+                  }
+                  className="cursor-pointer text-accent hover:text-white transition-transform duration-200 hover:scale-110"
+                />
               </div>
-              <p className="text-gray-300 text-sm">
-                {skill.items.join(" | ")}
-              </p>
+
+              {/* Email */}
+              <div className="flex items-center justify-center lg:justify-start gap-2">
+                <FaEnvelope className="text-accent" /> rajeshwari.cmc@gmail.com
+                <FaRegCopy
+                  onClick={() =>
+                    handleCopy("rajeshwari.cmc@gmail.com", "Email copied!")
+                  }
+                  className="cursor-pointer text-accent hover:text-white transition-transform duration-200 hover:scale-110"
+                />
+              </div>
             </div>
-          );
-        })}
+
+            {/* Copy message */}
+            {copied && (
+              <div className="mt-2 text-sm text-accent font-medium animate-fade">
+                {copied}
+              </div>
+            )}
+
+            {/* Social Icons */}
+            <div className="flex justify-center lg:justify-start gap-5 mt-6 flex-wrap">
+              <a
+                href="https://www.linkedin.com/in/rajeshwari-r-cmc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer group"
+              >
+                <FaLinkedin className="text-2xl text-background transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[2px] group-hover:text-accent" />
+              </a>
+              <a
+                href="https://github.com/Rajeshwari1403"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer group"
+              >
+                <FaGithub className="text-2xl text-background transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[2px] group-hover:text-accent" />
+              </a>
+              <a
+                href="https://www.instagram.com/it_z_rathi05/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer group"
+              >
+                <FaInstagram className="text-2xl text-background transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[2px] group-hover:text-accent" />
+              </a>
+              <a
+                href="https://leetcode.com/u/rajeshwariravi2005/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer group"
+              >
+                <SiLeetcode className="text-2xl text-background transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[2px] group-hover:text-accent" />
+              </a>
+              <a
+                href="https://www.geeksforgeeks.org/user/rajeshwb6d9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer group"
+              >
+                <SiGeeksforgeeks className="text-2xl text-background transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[2px] group-hover:text-accent" />
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+
+      <div className="w-full bg-background rounded-md h-[1px] relative mt-4"></div>
+    </section>
   );
 };
 
-export default SkillsTab;
+export default Contact;

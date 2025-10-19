@@ -48,12 +48,12 @@ const Hero = () => {
         </div>
         
         {/* Profile Image Section */}
-        <div className='w-[250px] md:w-[320px] h-[280px] md:h-[358px] bg-blue-100/100 rounded-3xl relative order-1 lg:order-2'>
+        <div className='w-[220px] md:w-[280px] h-[250px] md:h-[320px] bg-blue-100/100 rounded-3xl relative order-1 lg:order-2'>
           <img src={icon_1} alt='Profile_Pic' className='profile-pic' />
           <img src={I1} alt='Icon 1' className='icon-img -left-10 bottom-20 rotate-[1.75deg]' />
-          <img src={I2} alt='Icon 2' className='icon-img left-5 md:left-10 -bottom-12 rotate-[2.75deg]'/>
-          <img src={I3} alt='Icon 3' className='icon-img left-[110px] md:left-[170px] -bottom-16 rotate-[3.75deg]'/>
-          <img src={I4} alt='Icon 4' className='icon-img left-[200px] md:left-[285px] -bottom-9 md:bottom-10 rotate-[4.75deg]'/>
+          <img src={I2} alt='Icon 2' className='icon-img left-5 md:left-10 -bottom-8 rotate-[2.75deg]'/>
+          <img src={I3} alt='Icon 3' className='icon-img left-[110px] md:left-[170px] -bottom-8 rotate-[3.75deg]'/>
+          <img src={I4} alt='Icon 4' className='icon-img left-[200px] md:left-[250px] -bottom-9 md:bottom-10 rotate-[4.75deg]'/>
         </div>
       </div>
 
