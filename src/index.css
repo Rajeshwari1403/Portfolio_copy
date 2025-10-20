@@ -41,7 +41,7 @@
     ease-in-out hover:scale-105 hover:rotate-[3deg] top-4 md:top-6 md:left-20;
   }
   .profile-icon {
-    @apply w-[200px] md:w-[280px] h-[300px] md:h-[280px] rotate-[5.75deg] transition-transform duration-300
+    @apply w-[180px] md:w-[260px] h-[280px] md:h-[260px] rotate-[5.75deg] transition-transform duration-300
     ease-in-out hover:scale-105 hover:rotate-[3deg];
   }
   .icon-img {

@@ -15,14 +15,14 @@ const TechProficiency = () => {
     setActiveTab(value);
   }
   return (
-    <section id='skills' className='bg-primary mt-[-8px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
+    <section id='skills' className='bg-primary mt-[-24px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
       <div className="container mx-auto p-10">
             <h2 className="sec-title mb-2">Technical Skills</h2>
             <p className='text-sm text-center mb-4 leading-6 text-white font-semibold'>Hands-on experience with frontend, backend, databases, and essential tools 
                                                             like React, Node.js, MongoDB, Postman, and Figma. Focused on building 
                                                             efficient, responsive applications and integrating APIs for real-world solutions.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {SKILLS.map((skill) => {
                 const Icon = skill.icon;
                 return (
@@ -32,7 +32,7 @@ const TechProficiency = () => {
                   >
                     <div className="flex items-center gap-3 mb-3">
                       <Icon className={`${skill.color} text-3xl`} />
-                      <h3 className="text-lg font-semibold text-primary">{skill.title}</h3>
+                      <h3 className="text-lg font-semibold text-primary cursor-pointer">{skill.title}</h3>
                     </div>
                     <p className="text-gray-200 text-sm">
                       {skill.items.join("  |  ")}

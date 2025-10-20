@@ -4,11 +4,11 @@ import profile_pic from '../assets/Images/Image2.jpg';
 
 const AboutMe = () => {
   return (
-    <section id='about' className='bg-primary mt-[-2px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
+    <section id='about' className='bg-primary mt-[-20px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
       <div className='container mx-auto px-8 md:px-10 py-10'>
       <h4 className='block lg:hidden w-[200px] sec-title text-left mb-10 cursor-pointer'>About Me</h4>
-      <div className='flex flex-col lg:flex-row gap-16 items-start justify-between'>
-        <div className='w-[250px] md:w-[320px] h-[300px] md:h-[400px] bg-blue-100/100 rounded-3xl mx-auto'>
+      <div className='flex flex-col lg:flex-row gap-8 md:gap-20 items-start justify-between'>
+        <div className='w-[200px] md:w-[260px] h-[240px] md:h-[300px] bg-blue-100/100 rounded-3xl mx-auto'>
           <img src={profile_pic} alt='Profile_Pic' className='profile-pic' />
         </div>
         <div className='flex-1'>

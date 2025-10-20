@@ -17,7 +17,7 @@ const Certificates = () => {
     setActiveTab(value);
   }
   return (
-    <section id='certificates' className='bg-primary mt-[-8px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
+    <section id='certificates' className='bg-primary mt-[-14px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title mt-[-8px]'>
