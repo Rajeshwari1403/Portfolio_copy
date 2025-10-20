@@ -69,7 +69,7 @@ const MyProjects = () => {
           </button>
         </div>
       </div>
-       <div className='w-full bg-background rounded-md h-[1px] relative mt-[-8px]'></div>
+       <div className='w-full bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
     </section>
   )
 }

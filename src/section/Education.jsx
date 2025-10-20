@@ -12,7 +12,7 @@ const Education = () => {
         {/* Layout */}
         <div className='flex flex-col lg:flex-row gap-16 items-start justify-between'>
           {/* Left Side Icon */}
-          <div className='w-[200px] md:w-[260px] h-[240px] md:h-[300px] bg-blue-100 rounded-3xl mx-auto flex items-center justify-center mb-[-14px] md:mt-[104px] mt-6'>
+          <div className='w-[200px] md:w-[260px] h-[240px] md:h-[300px] bg-blue-100 rounded-3xl mx-auto flex items-center justify-center mb-[-32px] md:mt-[104px] mt-6'>
             <FaGraduationCap className='profile-icon w-36 h-48 md:w-48 md:h-48 text-primary' />
           </div>
           {/* Right Side Education Content */}
@@ -34,7 +34,7 @@ const Education = () => {
           </div>
         </div>
       </div>
-       <div className='w-full bg-background rounded-md h-[1px] relative mt-14'></div>
+       <div className='w-full bg-background rounded-md h-[1px] relative mt-12'></div>
     </section>
   );
 }

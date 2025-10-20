@@ -57,7 +57,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className='flex gap-8 mt-4 md:mt-14 flex-wrap'>
+      <div className='flex gap-6 mt-4 md:mt-14 flex-wrap'>
         {STATS.map((item) => (
           <StatInfoCard key={item.id} count={item.count} label={item.label} />
         ))}

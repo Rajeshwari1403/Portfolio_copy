@@ -49,7 +49,7 @@ const Certificates = () => {
         ))}
         </div>
       </div>
-       <div className='w-full bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
+       <div className='w-full bg-background rounded-md h-[1px] relative mt-[-14px]'></div>
     </section>
   )
 }
