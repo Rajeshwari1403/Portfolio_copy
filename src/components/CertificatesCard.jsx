@@ -6,7 +6,7 @@ const CertificatesCard = ({ icon, courseName, organization, link, tags = [] }) =
       {/* Top section */}
       <div className='flex gap-3'>
         {/* Icon */}
-        <div className='w-10 h-10 flex items-center justify-center bg-primary rounded-[7px]'>
+        <div className='w-10 h-10 flex items-center justify-center rounded-[7px]'>
           {icon}
         </div>
 

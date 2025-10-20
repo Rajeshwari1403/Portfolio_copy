@@ -127,6 +127,7 @@ export const CERTIFICATES = [
   {
     id: "01",
     icon: FaReact,
+    color: "text-cyan-800",
     name: "React JS",
     organization: "Scaler",
     link: "https://moonshot.scaler.com/s/sl/eH1LxFwn00",
@@ -136,6 +137,7 @@ export const CERTIFICATES = [
   {
     id: "02",
     icon: SiFigma,
+    color: "text-pink-700",
     name: "Figma",
     organization: "Udemy",
     link: "https://www.udemy.com/certificate/UC-5827d1fa-15a5-4a8a-90dc-f0f15e8d682e/",
@@ -145,6 +147,7 @@ export const CERTIFICATES = [
   {
     id: "03",
     icon: SiGithub,
+    color: "text-red-700",
     name: "Version Control",
     organization: "Coursera",
     link: "https://coursera.org/share/2e84a51c6d1900e2288d27f4a3bf813f",
@@ -154,6 +157,7 @@ export const CERTIFICATES = [
   {
     id: "04",
     icon: SiPostman,
+    color: "text-orange-700",
     name: "Postman API Fundamentals",
     organization: "Postman",
     link: "https://badgr.com/public/assertions/1eLWCUSZSRq_PY_hYXdyQQ",
@@ -163,6 +167,7 @@ export const CERTIFICATES = [
   {
     id: "05",
     icon: FaProjectDiagram,
+    color: "text-blue-900",
     name: "Data Structures",
     organization: "Great Learning",
     link: "https://www.mygreatlearning.com/certificate/LNRHBUFZ",
@@ -172,6 +177,7 @@ export const CERTIFICATES = [
   {
     id: "06",
     icon: SiPython,
+    color: "text-green-700",
     name: "Google IT Automation with Python",
     organization: "Coursera",
     link: "",
@@ -181,6 +187,7 @@ export const CERTIFICATES = [
   {
     id: "07",
     icon: FaBrain,
+    color: "text-yellow-700",
     name: "Artificial Intelligence",
     organization: "Infosys Springboard",
     link: "",
@@ -188,7 +195,6 @@ export const CERTIFICATES = [
     category: "ai",
   },
 ];
-
 
 export const ABOUT_ME = {
   content: `I am a Computer Science student with a strong interest in full-stack development, Python-based automation, and AI technologies, with experience in Python, the MERN stack, and MySQL. I enjoy developing responsive, user-friendly applications and exploring how software can solve real-time problems, think intelligently, and build automated, data-driven systems. I also enjoy learning the latest technologies and applying them to real-world, scalable projects.`,
