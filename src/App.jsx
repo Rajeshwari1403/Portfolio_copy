@@ -9,7 +9,6 @@ import Certificates from './section/Certificates'
 import Education from './section/Education'
 import Internships from './section/Internships'
 import Footer from './section/Footer'
-import Rough from './components/Rough'
 
 const App = () => {
   return (
@@ -17,8 +16,7 @@ const App = () => {
       <NavBar />
       <Hero />
       <AboutMe />
-      <Education />
-      
+      <Education /> 
       <TechProficiency />
       <MyProjects />
       <Certificates />
