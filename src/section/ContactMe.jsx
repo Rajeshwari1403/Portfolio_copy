@@ -21,7 +21,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-primary mt-[-20px] mx-auto max-w-8xl rounded-lg scroll-mt-20 mb-4"
+      className="bg-primary mt-[-20px] mx-auto max-w-7xl rounded-lg scroll-mt-20 mb-4"
     >
       <div className="container mx-auto px-8 md:px-10 py-10">
         {/* Mobile heading */}

@@ -19,7 +19,7 @@ const Certificates = () => {
   };
 
   return (
-    <section id='certificates' className='bg-primary mt-[-14px] mx-auto max-w-8xl rounded-lg scroll-mt-20'>
+    <section id='certificates' className='bg-primary mt-[-14px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title mt-[-8px]'>Certificates</h4>
@@ -53,7 +53,7 @@ const Certificates = () => {
         </div>
       </div>
 
-      <div className='w-[1480px] lg:ml-24 bg-background rounded-md h-[1px] relative mt-[-14px]'></div>
+      <div className='w-full bg-background rounded-md h-[1px] relative mt-[-14px]'></div>
     </section>
   );
 };

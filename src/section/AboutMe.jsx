@@ -4,7 +4,7 @@ import profile_pic from '../assets/Images/Image2.jpg';
 
 const AboutMe = () => {
   return (
-    <section id='about' className='bg-primary md:mt-[-8px] mt-[-20px] mx-auto max-w-8xl rounded-lg scroll-mt-20 mb-[-14px]'>
+    <section id='about' className='bg-primary md:mt-[-8px] mt-[-20px] mx-auto max-w-7xl rounded-lg scroll-mt-20 mb-[-14px]'>
       <div className='container mx-auto px-8 md:px-10 py-10'>
       <h4 className='block lg:hidden w-[200px] sec-title text-left mb-6 cursor-pointer'>About Me</h4>
       <div className='flex flex-col lg:flex-row gap-8 md:gap-20 items-start justify-between'>
@@ -33,7 +33,7 @@ const AboutMe = () => {
         </div>
       </div>
       </div>
-      <div className='w-[1480px] lg:ml-24 bg-background rounded-md h-[1px] relative mt-0'></div>
+      <div className='w-full bg-background rounded-md h-[1px] relative mt-0'></div>
     </section>
   )
 }

@@ -10,7 +10,7 @@ import StatInfoCard from '../components/StatInforCard'
 const Hero = () => {
 
   return (
-    <section id='hero' className='container mx-auto max-w-8xl px-8 scroll-mt-20'>
+    <section id='hero' className='container mx-auto max-w-7xl px-8 scroll-mt-20'>
       <div className='flex flex-col lg:flex-row gap-14 items-center justify-between mt-[64px]'>
         <div className='order-2 lg:order-1 text-center lg:text-left mt-2 lg:mt-0'>
           <h3 className='text-xl lg:text-2xl font-semibold text-white'>👋 Hi, I'm Rajeshwari R</h3>
@@ -62,7 +62,7 @@ const Hero = () => {
           <StatInfoCard key={item.id} count={item.count} label={item.label} />
         ))}
       </div>
-      <div className='max-w-8xl bg-background rounded-md h-[1px] relative mt-8'></div>
+      <div className='max-full bg-background rounded-md h-[1px] relative mt-8'></div>
     </section>
   )
 }

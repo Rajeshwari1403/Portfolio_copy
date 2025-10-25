@@ -15,7 +15,7 @@ const TechProficiency = () => {
     setActiveTab(value);
   }
   return (
-    <section id='skills' className='bg-primary mt-[-24px] mx-auto max-w-8xl rounded-lg scroll-mt-20'>
+    <section id='skills' className='bg-primary mt-[-24px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
       <div className="container mx-auto p-10">
             <h2 className="sec-title mb-2">Technical Skills</h2>
             <p className='text-sm text-center mb-4 leading-6 text-white font-semibold'>Hands-on experience with frontend, backend, databases, and essential tools 
@@ -42,7 +42,7 @@ const TechProficiency = () => {
               })}
             </div>
           </div>
-           <div className='w-[1480px] lg:ml-24 bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
+           <div className='w-full bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
     </section>
   )
 }

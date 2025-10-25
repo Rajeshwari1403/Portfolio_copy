@@ -19,7 +19,7 @@ const Internships = () => {
   }
   return (
     <section id='internships' className='bg-primary mt-[-18px] scroll-mt-20'>
-      <div className='container mx-auto p-10 max-w-8xl'>
+      <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title mt-[-8px] cursor-pointer'>
             Internships
@@ -56,7 +56,7 @@ const Internships = () => {
         ))}
         </div>
       </div>
-      <div className='w-[1480px] lg:ml-24 bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
+      <div className='w-[1280px] lg:ml-52 bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
     </section>
   )
 }
