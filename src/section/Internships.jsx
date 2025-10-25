@@ -56,7 +56,7 @@ const Internships = () => {
         ))}
         </div>
       </div>
-      <div className='w-[1280px] lg:ml-52 bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
+      <div className='w-[1280px] lg:ml-48 bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
     </section>
   )
 }
