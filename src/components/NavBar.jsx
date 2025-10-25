@@ -27,7 +27,7 @@ const NavBar = () => {
   }, [])
 
   return (
-    <nav className='container mx-auto max-w-7xl sticky top-7 z-10'>
+    <nav className='container mx-auto max-w-8xl sticky top-7 z-10'>
       <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
         {/*LOGO*/}
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
