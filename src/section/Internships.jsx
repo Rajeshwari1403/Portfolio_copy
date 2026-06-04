@@ -22,7 +22,7 @@ const Internships = () => {
       <div className='container mx-auto p-10'>
         <div className='w-full lg:w-[60vw] mx-auto'>
           <h4 className='sec-title mt-[-8px] cursor-pointer'>
-            Internships
+            Experience
           </h4>
           <p className='text-sm text-center mt-4 leading-6 text-white cursor-pointer font-semibold'>Acquired practical experience in full-stack development and quality assurance 
                                                          as an intern, engaging with React, Node.js, testing, and automated testing. 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import icon_1 from '../assets/Images/icon.jpg'
+import icon_1 from '../assets/Images/New.jpg'
 import I2 from '../assets/Images/backend.png'
 import I1 from '../assets/Images/javascript.png'
 import I3 from '../assets/Images/Program.png'
@@ -49,11 +49,11 @@ const Hero = () => {
         
         {/* Profile Image Section */}
         <div className='w-[200px] md:w-[260px] h-[240px] md:h-[300px] bg-blue-100/100 rounded-3xl relative order-1 lg:order-2'>
-          <img src={icon_1} alt='Profile_Pic' className='profile-pic' />
-          <img src={I1} alt='Icon 1' className='icon-img -left-6 bottom-20 rotate-[1.75deg]' />
-          <img src={I2} alt='Icon 2' className='icon-img left-5 md:left-10 -bottom-8 rotate-[2.75deg]'/>
-          <img src={I3} alt='Icon 3' className='icon-img left-[110px] md:left-[170px] -bottom-8 rotate-[3.75deg]'/>
-          <img src={I4} alt='Icon 4' className='icon-img left-[180px] md:left-[230px] bottom-8 md:bottom-10 rotate-[4.75deg]'/>
+          <img src={icon_1} alt='Profile_Pic' className='profile-pic w-full h-full object-cover rounded-3xl' />
+          <img src={I1} alt='Icon 1' className='icon-img absolute -left-6 bottom-20 rotate-[1.75deg]' />
+          <img src={I2} alt='Icon 2' className='icon-img absolute left-5 md:left-10 -bottom-8 rotate-[2.75deg]' />
+          <img src={I3} alt='Icon 3' className='icon-img absolute left-[110px] md:left-[170px] -bottom-8 rotate-[3.75deg]' />
+          <img src={I4} alt='Icon 4' className='icon-img absolute left-[180px] md:left-[230px] bottom-8 md:bottom-10 rotate-[4.75deg]' />
         </div>
       </div>
 

@@ -48,11 +48,11 @@ import alpixn from '../assets/Images/alpixn.png';
 export const MENU_LINKS = [
   { id: "01", label: "Home", offset: -70, to: "hero" },
   { id: "02", label: "About Me", offset: -70, to: "about" },
-  { id: "03", label: "Education", offset: -70, to: "education"},
-  { id: "04", label: "Skills", offset: -70, to: "skills"},
-  { id: "05", label: "Projects", offset: -70, to: "projects"},
-  { id: "06", label: "Certificates", offset: -70, to: "certificates"},
-  { id: "07", label: "Internships", offset: -70, to: "internships"},
+  { id: "03", label: "Experience", offset: -70, to: "internships"},
+  { id: "04", label: "Projects", offset: -70, to: "projects"},
+  { id: "05", label: "Skills", offset: -70, to: "skills"},
+  { id: "06", label: "Education", offset: -70, to: "education"},
+  { id: "07", label: "Certificates", offset: -70, to: "certificates"},
   { id: "08", label: "Contact", offset: -70, to: "contact"},
 ];
 
@@ -310,11 +310,11 @@ export const INTERNSHIPS = [
     id: "01",
     image: caratlane,
     ex: "CaratLane Trading Private Limited",
-    title: "CaratLane Trading Private Limited - OnSite",
+    title: "CaratLane Trading Private Limited - On-site",
     role: "Quality Engineer",
-    Project_Title: "Post-Purchase Service Management System",
+    Project_Title: "Post-Sales Service Management System",
     description: " Working on based post-sales project; responsible for test case design, bug tracking, and QA validation.",
-    duration: "July 2025 - Present"
+    duration: "July 2025 - Dec 2025"
   },
   {
     id: "02",
