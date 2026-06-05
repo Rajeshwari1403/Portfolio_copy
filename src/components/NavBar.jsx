@@ -63,7 +63,7 @@ const NavBar = () => {
         </button>
          
         {/*Navigation Links*/}
-        <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
+        {/*<ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
   {MENU_LINKS.map((item) => (
     <li key={item.id}>
       <span
@@ -77,7 +77,23 @@ const NavBar = () => {
       </span>
     </li>
   ))}
-</ul>
+</ul>*/}
+        <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
+          {MENU_LINKS.map((item) => (
+            <li key={item.id}>
+              <span
+                className="menu-item cursor-pointer"
+                onClick={() => {
+                  const element = document.getElementById(item.to);
+                  if (element) element.scrollIntoView({ behavior: "smooth" });
+                  if (window.innerWidth < 768) setisOpen(false); // Auto-closes menu overlay after selecting an option
+                }}
+              >
+                {item.label}
+              </span>
+            </li>
+          ))}
+        </ul>
 
         {/*Hire Me Button*/}
         <button
