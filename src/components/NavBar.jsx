@@ -3,33 +3,33 @@ import { MENU_LINKS } from '../utils/data';
 import LOGO from '../assets/Images/Portfolio.png';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-    const [isDesktop, setIsDesktop] = useState(false);
-
-    const toggleMenu = () => {
-      setIsOpen(prev => !prev);
-    };
-
-    useEffect(() => {
-      const handleResize = () => {
-        setIsDesktop(window.innerWidth >= 768);
-      };
-
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
-    useEffect(() => {
-      if (isDesktop) {
-        setIsOpen(true);
+  const [isOpen, setisOpen] = useState(true);
+  const toggleMenu = () => {
+    setisOpen(!isOpen);
+  };
+  useEffect(() => {
+    const handlereSize = () => {
+      if(window.innerWidth >= 768) {
+        setisOpen(true);  // Always set menu open on large screen
       } else {
-        setIsOpen(false);
+        setisOpen(false); // Always set menu hidden on small screen
       }
-    }, [isDesktop]);
+    };
+    // set initial state based on screen size
+    handlereSize();
+
+    // Listen to Resize Events
+    window.addEventListener("resize", handlereSize);
+
+    return () => {
+      window.removeEventListener("resize", handlereSize);
+    }
+  }, [])
 
   return (
-    <nav className='container mx-auto max-w-7xl sticky top-7 z-10'>
-      <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
+    <nav className='w-full max-w-full sticky top-0 z-50'>
+      {/*<div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>*/}
+      <div className='flex w-full items-center justify-between px-4 py-3 bg-white/50 backdrop-blur-md border border-primary'>
         {/*LOGO*/}
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
 
@@ -79,7 +79,7 @@ const NavBar = () => {
     </li>
   ))}
 </ul>*/}
-        <ul className={`menu-wrapper ${isDesktop ? "flex" : isOpen ? "flex absolute" : "hidden"}`}>
+        <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
           {MENU_LINKS.map((item) => (
             <li key={item.id}>
               <span
@@ -87,7 +87,7 @@ const NavBar = () => {
                 onClick={() => {
                   const element = document.getElementById(item.to);
                   if (element) element.scrollIntoView({ behavior: "smooth" });
-                  if (!isDesktop) setIsOpen(false); // Auto-closes menu overlay after selecting an option
+                  if (window.innerWidth < 768) setisOpen(false); // Auto-closes menu overlay after selecting an option
                 }}
               >
                 {item.label}
