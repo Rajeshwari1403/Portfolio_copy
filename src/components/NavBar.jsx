@@ -3,19 +3,23 @@ import { MENU_LINKS } from '../utils/data';
 import LOGO from '../assets/Images/Portfolio.png';
 
 const NavBar = () => {
-  const [isOpen, setisOpen] = useState(true);
+  // FIX: Changed from true to false so the menu is closed by default on page load
+  const [isOpen, setisOpen] = useState(false);
+
   const toggleMenu = () => {
     setisOpen(!isOpen);
   };
+
   useEffect(() => {
     const handlereSize = () => {
       if(window.innerWidth >= 768) {
-        setisOpen(true);  // Always set menu open on large screen
+        setisOpen(true);  // Always keep menu visible on laptops
       } else {
-        setisOpen(false); // Always set menu hidden on small screen
+        setisOpen(false); // Keep menu hidden on mobile unless clicked
       }
     };
-    // set initial state based on screen size
+    
+    // Set initial state based on screen size
     handlereSize();
 
     // Listen to Resize Events
@@ -33,22 +37,22 @@ const NavBar = () => {
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
 
         <button 
-        className='block md:hidden text-[#333] mr-6 focus:outline-none'
-        onClick={toggleMenu}
+          className='block md:hidden text-[#333] mr-6 focus:outline-none'
+          onClick={toggleMenu}
         >
           <svg 
-          className='w-6 h-6' 
-          fill='none' 
-          stroke='currentColor'
-          viewBox='0 0 24 24'
-          xmlns='http://www.w3.org/2000/svg'
+            className='w-6 h-6' 
+            fill='none' 
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+            xmlns='http://www.w3.org/2000/svg'
           >
             { isOpen ? (
               <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              d='M6 18L18 6M6 6l12 12'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M6 18L18 6M6 6l12 12'
               />
             ) : (
               <path 
@@ -57,27 +61,11 @@ const NavBar = () => {
                 strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
-
             )}
           </svg>
         </button>
          
-        {/*Navigation Links*/}
-        {/*<ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
-  {MENU_LINKS.map((item) => (
-    <li key={item.id}>
-      <span
-        className="menu-item cursor-pointer"
-        onClick={() => {
-          const element = document.getElementById(item.to);
-          if (element) element.scrollIntoView({ behavior: "smooth" });
-        }}
-      >
-        {item.label}
-      </span>
-    </li>
-  ))}
-</ul>*/}
+        {/*Navigation Links - Completely untouched UI styles*/}
         <ul className={`${isOpen ? "flex" : "hidden"} menu-wrapper`}>
           {MENU_LINKS.map((item) => (
             <li key={item.id}>
@@ -106,15 +94,9 @@ const NavBar = () => {
         >
           Hire Me
         </button>
-        {/*<button className='hidden md:block h-12 text-[15px] font-medium text-white bg-primary rounded-full 
-                    px-9 transition-transform duration-300 ease-in-out hover:scale-105'
-        >
-          Hire Me
-        </button>*/}
-
       </div>
     </nav>
   )
 }
 
-export default NavBar
+export default NavBar;

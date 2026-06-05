@@ -46,7 +46,7 @@ import caratlane from '../assets/Images/caratlane.png';
 import alpixn from '../assets/Images/alpixn.png';
 
 export const MENU_LINKS = [
-  { id: "01", label: "Home", offset: -70, to: "hero" },
+  { id: "01", label: "Home#####", offset: -70, to: "hero" },
   { id: "02", label: "About Me", offset: -70, to: "about" },
   { id: "03", label: "Experience", offset: -70, to: "internships"},
   { id: "04", label: "Projects", offset: -70, to: "projects"},
