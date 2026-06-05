@@ -3,28 +3,29 @@ import { MENU_LINKS } from '../utils/data';
 import LOGO from '../assets/Images/Portfolio.png';
 
 const NavBar = () => {
-  const [isOpen, setisOpen] = useState(false);
-  const toggleMenu = () => {
-    setisOpen(!isOpen);
-  };
-  useEffect(() => {
-    const handlereSize = () => {
-      if(window.innerWidth >= 768) {
-        setisOpen(true);  // Always set menu open on large screen
-      } else {
-        setisOpen(false); // Always set menu hidden on small screen
-      }
+  const [isOpen, setIsOpen] = useState(false);
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    const toggleMenu = () => {
+      setIsOpen(prev => !prev);
     };
-    // set initial state based on screen size
-    handlereSize();
 
-    // Listen to Resize Events
-    window.addEventListener("resize", handlereSize);
+    useEffect(() => {
+      const handleResize = () => {
+        setIsDesktop(window.innerWidth >= 768);
+      };
 
-    return () => {
-      window.removeEventListener("resize", handlereSize);
-    }
-  }, [])
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    useEffect(() => {
+      if (isDesktop) {
+        setIsOpen(true);
+      } else {
+        setIsOpen(false);
+      }
+    }, [isDesktop]);
 
   return (
     <nav className='container mx-auto max-w-7xl sticky top-7 z-10'>
@@ -78,7 +79,7 @@ const NavBar = () => {
     </li>
   ))}
 </ul>*/}
-        <ul className={`menu-wrapper md:flex ${isOpen ? "flex" : "hidden"} md:static absolute`}>
+        <ul className={`menu-wrapper ${isDesktop ? "flex" : isOpen ? "flex absolute" : "hidden"}`}>
           {MENU_LINKS.map((item) => (
             <li key={item.id}>
               <span
@@ -86,7 +87,7 @@ const NavBar = () => {
                 onClick={() => {
                   const element = document.getElementById(item.to);
                   if (element) element.scrollIntoView({ behavior: "smooth" });
-                  if (window.innerWidth < 768) setisOpen(false); // Auto-closes menu overlay after selecting an option
+                  if (!isDesktop) setIsOpen(false); // Auto-closes menu overlay after selecting an option
                 }}
               >
                 {item.label}
