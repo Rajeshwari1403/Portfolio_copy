@@ -27,9 +27,9 @@ const NavBar = () => {
   }, [])
 
   return (
-    <nav className='w-full max-w-full sticky top-0 z-50'>
+    <nav className='w-full max-w-full sticky top-7 z-10'>
       {/*<div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>*/}
-      <div className='flex w-full items-center justify-between px-4 py-3 bg-white/50 backdrop-blur-md border border-primary'>
+        <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
         {/*LOGO*/}
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
 
