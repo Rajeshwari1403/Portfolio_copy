@@ -39,8 +39,14 @@ import travel from '../assets/Images/Travel.jpg';
 import weather from '../assets/Images/Weather.png';
 import football from '../assets/Images/FootBall_Match_Prediction.jpg';
 import ecommerce from '../assets/Images/Ecommerce_Web.jpg';
-import event from '../assets/Images/Event.jpg';
-import linkedin from '../assets/Images/LinkedIn.jpg';
+
+import ai_career from '../assets/Images/AI_Career_Coach_img.png';
+import ai_study from '../assets/Images/Study_Planner.png';
+import rag_img from '../assets/Images/RAG_Prj.png';
+import analytics_ml from '../assets/Images/Analytics_ML.png'
+
+//import event from '../assets/Images/Event.jpg';
+//import linkedin from '../assets/Images/LinkedIn.jpg';
 
 import caratlane from '../assets/Images/caratlane.png';
 import alpixn from '../assets/Images/alpixn.png';
@@ -184,7 +190,7 @@ export const CERTIFICATES = [
     tags: ["Python", "Automation", "OS Interaction", "Scripting"],
     category: "automation",
   },
-  {
+  /*{
     id: "07",
     icon: FaBrain,
     color: "text-yellow-700",
@@ -193,7 +199,7 @@ export const CERTIFICATES = [
     link: "",
     tags: ["AI", "Machine Learning", "Data Science"],
     category: "ai",
-  },
+  },*/
 ];
 
 export const ABOUT_ME = {
@@ -242,61 +248,117 @@ export const EDUCATION = [
   },
 ];
 
+// Add your image imports here as usual
+// import aiCareer from '../assets/ai-career.png';
+// import rfidImg from '../assets/rfid.png'; 
+// etc...
+
 export const PROJECTS = [
+  // --- CATEGORY: ai-apps (Purely Intelligent Systems) ---
   {
     id: "01",
-    title:
-    "Travel Diary Calendar",
-    image: travel,
-    tags: ["React JS", "Node JS", "Express JS", "MongoDB"],
-    link: "https://github.com/Rajeshwari1403/Travel_Diary_Calendar",
-    deployed_link: "",
+    title: "AI Career Coach",
+    image: ai_career,
+    tags: ["Next.js", "React", "Gemini AI API", "Prisma ORM", "PostgreSQL (Neon DB)", "Inngest", "Tailwind CSS"],
+    link: "https://github.com/Rajeshwari1403/AI_Career_Coach",
+    deployed_link: "https://ai-career-compass-app.vercel.app/",
+    category: "ai-apps"
   },
   {
     id: "02",
+    title: "AI Study Planner",
+    image: ai_study,
+    tags: ["React", "Vite", "Node.js", "Express.js", "Tailwind CSS"],
+    link: "https://github.com/Rajeshwari1403/AI_Study_Planner",
+    deployed_link: "",
+    category: "ai-apps"
+  },
+  {
+    id: "03",
+    title: "Production-Grade RAG AI Agent Pipeline",
+    image: rag_img,
+    tags: ["FastAPI", "LlamaIndex", "Qdrant Vector DB", "Inngest", "Streamlit"],
+    link: "https://github.com/Rajeshwari1403/RAG_APPLICATION",
+    deployed_link: "",
+    category: "ai-apps"
+  },
+
+  // --- CATEGORY: data-analytics (Data Pipelines & ML) ---
+  {
+    id: "04",
+    title: "Customer Lifecycle Analytics & Predictive Modeling Pipeline",
+    image: analytics_ml,
+    tags: ["Python", "Pandas", "SQLAlchemy", "HDBSCAN", "PostgreSQL", "Power BI"],
+    link: "https://github.com/Rajeshwari1403/customer_analysis_prediction/",
+    deployed_link: "",
+    category: "data-analytics"
+  },
+  {
+    id: "05",
+    title: "Football Match Prediction (Py)",
+    image: football,
+    tags: ["Python", "ML", "Scikit-Learn"],
+    link: "https://github.com/Rajeshwari1403/ML-Football-Match-Prediction",
+    deployed_link: "",
+    category: "data-analytics"
+  },
+
+  // --- CATEGORY: fullstack-iot (Core Software & Hardware Engineering) ---
+  {
+    id: "06",
+    title: "Travel Diary Calendar",
+    image: travel,
+    description: "A full-stack media logging system with custom API endpoints to document journey milestones interactively.",
+    tags: ["MongoDB", "Express JS", "React JS", "Node JS", "Flask API"],
+    link: "https://github.com/Rajeshwari1403/Travel_Diary_Calendar",
+    deployed_link: "",
+    category: "fullstack-iot"
+  },
+  {
+    id: "07",
+    title: "Ecommerce Website",
+    image: ecommerce,
+    tags: ["React JS", "Node JS", "Express JS", "MongoDB"],
+    link: "https://github.com/Rajeshwari1403/Ecommerce_web",
+    deployed_link: "",
+    category: "fullstack-iot"
+  },
+  {
+    id: "08",
+    title: "RFID-Based Attendance Management System",
+    image: null,
+    tags: ["C++", "NodeMCU ESP8266", "RFID RC522", "Google Sheets API"],
+    link: "https://github.com/Rajeshwari1403",
+    deployed_link: "",
+    category: "fullstack-iot"
+  },
+  /*{
+    id: "09",
+    title: "Event Management Application",
+    image: "event",
+    tags: ["HTML", "CSS", "MySql"],
+    link: "https://github.com/Rajeshwari1403/Restro",
+    deployed_link: "",
+    category: "web-hardware"
+  },*/
+  /*{
+    id: "10",
     title:
     "Weather App",
     image: weather,
     tags: ["React JS", "Weather API"],
     link: "https://github.com/Rajeshwari1403/WeatherAPI",
     deployed_link: "https://weather-api-phi-lyart.vercel.app/",
-  },
-  {
-    id: "03",
-    title:
-    "Ecommerce Website",
-    image: ecommerce,
-    tags: ["React JS", "Node JS", "Express JS", "MongoDB"],
-    link: "https://github.com/Rajeshwari1403/Ecommerce_web",
-    deployed_link: "",
-  },
-  {
-    id: "04",
-    title:
-    "Event Management Application",
-    image: event,
-    tags: ["HTML", "CSS", "MySql"],
-    link: "https://github.com/Rajeshwari1403/Restro",
-    deployed_link: "",
-  },
-  {
-    id: "05",
-    title:
-    "Linkedin Clone",
-    image: linkedin,
+  },*/
+  /*{
+    id: "11",
+    title: "Linkedin Clone",
+    image: "linkedin",
     tags: ["React", "Node JS", "Express JS", "MongoDB"],
     link: "https://github.com/Rajeshwari1403/LinkedIn-Clone",
     deployed_link: "",
-  },
-  {
-    id: "06",
-    title:
-    "Football Match Prediction (Py)",
-    image: football,
-    tags: ["Python", "ML"],
-    link: "https://github.com/Rajeshwari1403/ML-Football-Match-Prediction",
-    deployed_link: "",
-  },
+    category: "ai-fullstack"
+  },*/
 ];
 
 export const INTERNSHIPS_TABS = [

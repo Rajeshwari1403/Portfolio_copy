@@ -1,77 +1,86 @@
-import React from 'react'
-
-import useEmblaCarousel from "embla-carousel-react";
-import { useState, useEffect, useCallback } from 'react';
-import { IoIosArrowForward } from 'react-icons/io';
+import React, { useState } from 'react';
 import { PROJECTS } from '../utils/data';
 import ProjectCard from '../components/ProjectCard';
 
 const MyProjects = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start"});
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
-  const updateScrollButtons = useCallback(() => {
-    if (!emblaApi) return;
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
-  }, [emblaApi]);
-  useEffect(() => {
-    if (!emblaApi) return;
-    emblaApi.on("select", updateScrollButtons);
-    updateScrollButtons();
-  }, [emblaApi, updateScrollButtons]);
+  // Available Tabs corresponding to our data keys
+  const [activeTab, setActiveTab] = useState("ai-apps");
+
+  // Dynamically filter data based on selected category
+  const filteredProjects = PROJECTS.filter(project => project.category === activeTab);
 
   return (
     <section id='projects' className='bg-primary mt-[-16px] mx-auto max-w-7xl rounded-lg scroll-mt-20'>
-      <div className='container mx-auto px-8 md:px-10 py-10'>
-        <div className='w-full lg:w-[60vw] mx-auto'>
-          <h4 className='sec-title mt-[-10px]'>Projects</h4>
-          <p className='text-sm text-center mt-2 leading-6 text-white font-semibold'>
-            Developed Python and full-stack projects using React, Node.js, MongoDB,
-            and APIs. Focused on responsive web apps and practical real-world solutions.
+      <div className='container mx-auto px-6 md:px-10 py-10'>
+        
+        {/* Header Block */}
+        <div className='w-full lg:w-[60vw] mx-auto text-center'>
+          <h4 className='sec-title mt-[-8px] cursor-pointer'>
+            Projects
+          </h4>
+          <p className='text-sm mt-2 leading-6 text-white font-semibold'>
+            Developed clean AI pipelines, scalable software architectures, and automated data engines. 
+            Select an engineering domain below to explore specific implementations.
           </p>
         </div>
-        <div className='relative mb-[-20px]'>
-          <div className='overflow-hidden' ref={emblaRef}>
-            <div className='flex pt-8 pb-8'>
-              {PROJECTS.map((project) => (
-                <div 
-                   key={project.id}
-                   className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'
-                >
-                  <ProjectCard
-                      key={project.id}
-                      imgUrl={project.image}
-                      title={project.title}
-                      tags={project.tags}
-                      link={project.link}
-                      deployed_link={project.deployed_link}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Navigation Buttons */}
-          <button 
-              className={`arrow-btn -left-5 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""}`}
-              onClick={() => emblaApi && emblaApi.scrollPrev()}
-              disabled={!canScrollPrev}
-          >
-            <IoIosArrowForward className='rotate-100' />
-          </button>
 
-          <button 
-              className={`arrow-btn -right-5 ${!canScrollPrev ? "opacity-50 cursor-not-allowed" : ""}`}
-              onClick={() => emblaApi && emblaApi.scrollNext()}
-              disabled={!canScrollPrev}
+        {/* Tab Switcher Buttons */}
+        <div className='flex flex-wrap justify-center gap-3 my-8 max-w-2xl mx-auto'>
+          <button
+            onClick={() => setActiveTab("ai-apps")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              activeTab === "ai-apps"
+                ? "bg-white text-black shadow-md scale-105"
+                : "bg-[#6298BC] text-blue-950 hover:bg-[#6298BC]/50 hover:text-white"
+            }`}
           >
-            <IoIosArrowForward />
+            🤖 AI Systems
+          </button>
+          <button
+            onClick={() => setActiveTab("data-analytics")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              activeTab === "data-analytics"
+                ? "bg-white text-black shadow-md scale-105"
+                : "bg-[#6298BC] text-blue-950 hover:bg-[#6298BC]/50 hover:text-white"
+            }`}
+          >
+            📊 Data & Analytics
+          </button>
+          <button
+            onClick={() => setActiveTab("fullstack-iot")}
+            className={`px-5 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 ${
+              activeTab === "fullstack-iot"
+                ? "bg-white text-black shadow-md scale-105"
+                : "bg-[#6298BC] text-blue-950 hover:bg-[#6298BC]/50 hover:text-white"
+            }`}
+          >
+            🌐 Full-Stack & IoT
           </button>
         </div>
-      </div>
-       <div className='w-full bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
-    </section>
-  )
-}
 
-export default MyProjects
+        {/* Clean Static Responsive Grid Container (No Slides, No Arrows) */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-4 pb-8'>
+          {filteredProjects.map((project) => (
+            <div 
+              key={project.id} 
+              className='transform transition-all duration-300 hover:-translate-y-1'
+            >
+              <ProjectCard
+                imgUrl={project.image}
+                title={project.title}
+                tags={project.tags}
+                link={project.link}
+                deployed_link={project.deployed_link}
+                description={project.description}
+              />
+            </div>
+          ))}
+        </div>
+
+      </div>
+      <div className='w-full bg-background rounded-md h-[1px] relative mt-[-10px]'></div>
+    </section>
+  );
+};
+
+export default MyProjects;
