@@ -277,7 +277,7 @@ export const PROJECTS = [
     id: "03",
     title: "Production-Grade RAG AI Agent Pipeline",
     image: rag_img,
-    tags: ["FastAPI", "LlamaIndex", "Qdrant Vector DB", "Inngest", "Streamlit"],
+    tags: ["Python", "RAG", "FastAPI", "LlamaIndex", "Qdrant Vector DB", "Inngest"],
     link: "https://github.com/Rajeshwari1403/RAG_APPLICATION",
     deployed_link: "",
     category: "ai-apps"
