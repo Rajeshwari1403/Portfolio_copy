@@ -43,7 +43,8 @@ import ecommerce from '../assets/Images/Ecommerce_Web.jpg';
 import ai_career from '../assets/Images/AI_Career_Coach_img.png';
 import ai_study from '../assets/Images/Study_Planner.png';
 import rag_img from '../assets/Images/RAG_Prj.png';
-import analytics_ml from '../assets/Images/Analytics_ML.png'
+import analytics_ml from '../assets/Images/Analytics_ML.png';
+import rfid from '../assets/Images/image.png';
 
 //import event from '../assets/Images/Event.jpg';
 //import linkedin from '../assets/Images/LinkedIn.jpg';
@@ -259,6 +260,7 @@ export const PROJECTS = [
     id: "01",
     title: "AI Career Coach",
     image: ai_career,
+    description: "Next.js platform using Gemini AI for real-time ATS scoring and mock interviews.",
     tags: ["Next.js", "React", "Gemini AI API", "Prisma ORM", "PostgreSQL (Neon DB)", "Inngest", "Tailwind CSS"],
     link: "https://github.com/Rajeshwari1403/AI_Career_Coach",
     deployed_link: "https://ai-career-compass-app.vercel.app/",
@@ -268,6 +270,7 @@ export const PROJECTS = [
     id: "02",
     title: "AI Study Planner",
     image: ai_study,
+    description: "Vite-React app generating personalized, adaptive study schedules using dynamic LLM timelines.",
     tags: ["React", "Vite", "Node.js", "Express.js", "Tailwind CSS"],
     link: "https://github.com/Rajeshwari1403/AI_Study_Planner",
     deployed_link: "",
@@ -277,6 +280,7 @@ export const PROJECTS = [
     id: "03",
     title: "Production-Grade RAG AI Agent Pipeline",
     image: rag_img,
+    description: "Production-grade RAG AI agent pipeline orchestrated with LlamaIndex, FastAPI, and Python.",
     tags: ["Python", "RAG", "FastAPI", "LlamaIndex", "Qdrant Vector DB", "Inngest"],
     link: "https://github.com/Rajeshwari1403/RAG_APPLICATION",
     deployed_link: "",
@@ -288,6 +292,7 @@ export const PROJECTS = [
     id: "04",
     title: "Customer Lifecycle Analytics & Predictive Modeling Pipeline",
     image: analytics_ml,
+    description: "Customer lifecycle pipeline using SQL, HDBSCAN clustering, and predictive machine learning models.",
     tags: ["Python", "Pandas", "SQLAlchemy", "HDBSCAN", "PostgreSQL", "Power BI"],
     link: "https://github.com/Rajeshwari1403/customer_analysis_prediction/",
     deployed_link: "",
@@ -308,11 +313,11 @@ export const PROJECTS = [
     id: "06",
     title: "Travel Diary Calendar",
     image: travel,
-    description: "A full-stack media logging system with custom API endpoints to document journey milestones interactively.",
-    tags: ["MongoDB", "Express JS", "React JS", "Node JS", "Flask API"],
+    description: "MERN platform with a Flask ML engine predicting milestone travel behavior patterns.",
+    tags: ["React JS", "Express JS", "Node JS", "MongoDB", "Python","Flask API", "ML"],
     link: "https://github.com/Rajeshwari1403/Travel_Diary_Calendar",
     deployed_link: "",
-    category: "fullstack-iot"
+    category: "data-analytics"
   },
   {
     id: "07",
@@ -326,8 +331,9 @@ export const PROJECTS = [
   {
     id: "08",
     title: "RFID-Based Attendance Management System",
-    image: null,
-    tags: ["C++", "NodeMCU ESP8266", "RFID RC522", "Google Sheets API"],
+    image: rfid,
+    description: "Real-time IoT attendance tracking system using ESP8266 NodeMCU, RFID, and Google Sheets.",
+    tags: ["Arduino C++", "NodeMCU ESP8266", "RFID MFRC522", "Google Sheets API"],
     link: "https://github.com/Rajeshwari1403",
     deployed_link: "",
     category: "fullstack-iot"

@@ -12,7 +12,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handlereSize = () => {
-      if (window.innerWidth >= 768) {
+      if (window.innerWidth >= 1024) {
         setisOpen(false); // Clean up open toggle if user scales back up to desktop
       }
     };
@@ -26,14 +26,14 @@ const NavBar = () => {
 
   return (
     <nav className='w-full max-w-7xl mx-auto sticky top-7 z-10'>
-      <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] md:p-0'>
+      <div className='flex items-center justify-between rounded-full bg-white/50 border border-primary m-5 p-3 backdrop-blur-[10px] lg:p-0'>
         
         {/* LOGO */}
         <img className='h-7 ml-6 -mb-1' src={LOGO} alt='Logo' />
 
         {/* Mobile Hamburger Trigger Toggle Button */}
         <button 
-          className='block md:hidden text-[#333] mr-6 focus:outline-none'
+          className='block lg:hidden text-[#333] mr-6 focus:outline-none'
           onClick={toggleMenu}
         >
           <svg 
@@ -64,7 +64,36 @@ const NavBar = () => {
           
         {/* Navigation Links */}
         {/* Fix 2: Replaced conditional 'flex' with 'md:flex' and controlled the mobile view completely via state logic */}
-        <ul className={`${isOpen ? "flex" : "hidden"} md:flex menu-wrapper`}>
+        <ul className={`
+          ${isOpen ? "flex" : "hidden"} 
+          lg:flex 
+          flex-col 
+          lg:flex-row 
+          absolute 
+          lg:static 
+          top-[75px] 
+          left-0 
+          right-0
+          w-[calc(100%-2rem)]
+          mx-auto
+          lg:w-auto 
+          bg-[#c0ced1]/95 
+          lg:bg-transparent 
+          backdrop-blur-[15px] 
+          lg:backdrop-blur-none
+          rounded-2xl 
+          lg:rounded-none 
+          p-6 
+          lg:p-0 
+          shadow-xl 
+          lg:shadow-none 
+          gap-4 
+          lg:gap-6
+          items-start
+          lg:items-center
+          z-20 
+          menu-wrapper
+        `}>
           {MENU_LINKS.map((item) => (
             <li key={item.id}>
               <span
@@ -72,7 +101,7 @@ const NavBar = () => {
                 onClick={() => {
                   const element = document.getElementById(item.to);
                   if (element) element.scrollIntoView({ behavior: "smooth" });
-                  if (window.innerWidth < 768) setisOpen(false); 
+                  if (window.innerWidth < 1024) setisOpen(false); 
                 }}
               >
                 {item.label}
@@ -87,7 +116,7 @@ const NavBar = () => {
             const element = document.getElementById('contact');
             if (element) element.scrollIntoView({ behavior: 'auto' });
           }}
-          className='hidden md:block h-12 text-[15px] font-semibold text-primary bg-white rounded-full border-4 border-background px-9 transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white hover:border-4 hover:border-white'
+          className='hidden lg:block h-12 text-[15px] font-semibold text-primary bg-white rounded-full border-4 border-background px-9 transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-primary hover:text-white hover:border-4 hover:border-white'
         >
           Hire Me
         </button>
